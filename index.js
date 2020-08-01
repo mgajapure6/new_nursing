@@ -39,6 +39,10 @@ router.get("/student_life", function (request, response) {
   response.sendFile(path.join(__dirname + "/pages/student_life/student_life.html"));
 });
 
+router.get("/gallery", function (request, response) {
+  response.sendFile(path.join(__dirname + "/pages/gallery/gallery.html"));
+});
+
 
 
 //add the router
