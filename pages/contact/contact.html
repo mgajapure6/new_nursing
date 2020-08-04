@@ -109,11 +109,16 @@
                   $(form).ajaxSubmit({
                     dataType:  'json',
                     success: function(data) {
-                      if( data.status == 'true' ) {
+                      console.log("data",data);
+                      if( data.status) {
                         $(form).find('.form-control').val('');
+                        $(form_result_div).removeClass('alert-danger').addClass('alert-success');
+                        $(form_result_div).html(data.message).fadeIn('slow');
+                      }else{
+                        $(form_result_div).removeClass('alert-success').addClass('alert-danger');
+                        $(form_result_div).html(data.message).fadeIn('slow');
                       }
                       form_btn.prop('disabled', false).html(form_btn_old_msg);
-                      $(form_result_div).html(data.message).fadeIn('slow');
                       setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
                     }
                   });
