@@ -83,67 +83,8 @@
       <div class="separator separator-rouned">
         <i class="fa fa-cog"></i>
       </div>
-      <div class="heading-line-bottom">
-        <h4 class="heading-title">Inauguration Event</h4>
-      </div>
-      <div class="gallery-isotope grid-4 gutter-small clearfix" data-lightbox="gallery"
-        style="position: relative; height: 428.5px;">
-        <!-- Portfolio Item Start -->
-        <div class="gallery-item" style="position: absolute; left: 0px; top: 0px;">
-          <a href="http://placehold.it/400x300" data-lightbox="gallery-item" title="Title Here 1"><img
-              src="http://placehold.it/400x300" alt=""></a>
-        </div>
-        <!-- Portfolio Item End -->
-
-        <!-- Portfolio Item Start -->
-        <div class="gallery-item" style="position: absolute; left: 285px; top: 0px;">
-          <a href="http://placehold.it/400x300" data-lightbox="gallery-item" title="Title Here 2"><img
-              src="http://placehold.it/400x300" alt=""></a>
-        </div>
-        <!-- Portfolio Item End -->
-
-        <!-- Portfolio Item Start -->
-        <div class="gallery-item" style="position: absolute; left: 570px; top: 0px;">
-          <a href="http://placehold.it/400x300" data-lightbox="gallery-item" title="Title Here 3"><img
-              src="http://placehold.it/400x300" alt=""></a>
-        </div>
-        <!-- Portfolio Item End -->
-
-        <!-- Portfolio Item Start -->
-        <div class="gallery-item" style="position: absolute; left: 855px; top: 0px;">
-          <a href="http://placehold.it/400x300" data-lightbox="gallery-item" title="Title Here 4"><img
-              src="http://placehold.it/400x300" alt=""></a>
-        </div>
-        <!-- Portfolio Item End -->
-
-        <!-- Portfolio Item Start -->
-        <div class="gallery-item" style="position: absolute; left: 0px; top: 214px;">
-          <a href="http://placehold.it/400x300" data-lightbox="gallery-item" title="Title Here 5"><img
-              src="http://placehold.it/400x300" alt=""></a>
-        </div>
-        <!-- Portfolio Item End -->
-
-        <!-- Portfolio Item Start -->
-        <div class="gallery-item" style="position: absolute; left: 285px; top: 214px;">
-          <a href="http://placehold.it/400x300" data-lightbox="gallery-item" title="Title Here 6"><img
-              src="http://placehold.it/400x300" alt=""></a>
-        </div>
-        <!-- Portfolio Item End -->
-
-        <!-- Portfolio Item Start -->
-        <div class="gallery-item" style="position: absolute; left: 570px; top: 214px;">
-          <a href="http://placehold.it/400x300" data-lightbox="gallery-item" title="Title Here 2"><img
-              src="http://placehold.it/400x300" alt=""></a>
-        </div>
-        <!-- Portfolio Item End -->
-
-        <!-- Portfolio Item Start -->
-        <div class="gallery-item" style="position: absolute; left: 855px; top: 214px;">
-          <a href="http://placehold.it/400x300" data-lightbox="gallery-item" title="Title Here 3"><img
-              src="../../assets/images/gal/gal ().JPG" alt=""></a>
-        </div>
-        <!-- Portfolio Item End -->
-      </div>
+      
+      
     </div>
 </section>
 
@@ -153,6 +94,7 @@
 <script>
   $.ajax({
     url: "/getImagesCount",
+    async: false,
     success: function (data) {
       console.log('data',data);
       if(data.imgLength){
