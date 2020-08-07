@@ -60,9 +60,9 @@ router.post("/sendmail", function (request, response) {
   var respData={};
   var form = request.body;
   console.dir("form", form);
-  var auth_email = "mgajapure6@gmail.com";
-  var auth_pass = "Google$$1122";
-  var to_emails = "mgajapure6@gmail.com";
+  var auth_email = "sssnursingtest@gmail.com";
+  var auth_pass = "Welcome@12345";
+  var to_emails = "ranjeetborade21@gmail.com,shrisainursingschool@gmail.com";
 
   var thanks_msg = '<h1>Shri Sai School Of Nursing, Umred</h1>'+
   '<h2>Thank you for contacting us '+form.form_name+'</h2>'+
