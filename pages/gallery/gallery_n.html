@@ -162,13 +162,13 @@
           <div class="container">
             <nav id="menuzord" class="menuzord bg-theme-colored pull-left flip menuzord-responsive">
               <ul class="menuzord-menu">
-                <li class="active"><a link="/home" href="javascript:;"
-                    class="navigation-link home-link navigation-link-h" onclick="loadPage(this)">Home</a></li>
+                <li><a link="/" href="/"
+                    class="navigation-link home-link navigation-link-h">Home</a></li>
                 <li><a link="/about_us" href="/about_us" class="navigation-link navigation-link-a">About
                     Us</a></li>
                 <li><a link="/our_courses" href="/our_courses" class="navigation-link navigation-link-o">Our
                     Courses</a></li>
-                <li><a link="/gallery" href="/gallery" class="navigation-link navigation-link-g">Photo
+                <li class="active"><a link="/gallery" href="/gallery" class="navigation-link navigation-link-g">Photo
                     Gallery</a></li>
                 <li><a link="/contact_us" href="/contact_us" class="navigation-link navigation-link-c">Contact
                     Us</a></li>
@@ -198,7 +198,95 @@
     <!-- Start main-content -->
     <div class="main-content" id="main-page-container">
 
+      <section class="inner-header divider parallax layer-overlay overlay-dark-5"
+        data-bg-img="../../assets/images/bg/bg3.jpg">
+        <div class="container pt-70 pb-20">
+          <!-- Section Content -->
+          <div class="section-content">
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="title text-white">Photo Gallery</h2>
+                <ol class="breadcrumb text-left text-black mt-10">
+                  <li><a href="#" class="text-gray-silver">Home</a></li>
+                  <li class="active text-gray-silver">Photo Gallery</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Experts Details -->
+      <section>
+        <div class="container">
+          <div class="section-content">
+            <div class="heading-line-bottom">
+              <h4 class="heading-title">Some Of Our Memories</h4>
+            </div>
+            <div id="img-gal-appender" class="gallery-isotope grid-4 gutter-small clearfix" data-lightbox="gallery"
+              style="position: relative; height: 428.5px;">
+              <!-- Portfolio Item Start -->
+              <div class="gallery-item" style="position: absolute; left: 0px; top: 0px;">
+                <a href="http://placehold.it/400x300" data-lightbox="gallery-item" title="Title Here 1"><img
+                    src="http://placehold.it/400x300" alt=""></a>
+              </div>
+              <!-- Portfolio Item End -->
 
+              <!-- Portfolio Item Start -->
+              <div class="gallery-item" style="position: absolute; left: 285px; top: 0px;">
+                <a href="http://placehold.it/400x300" data-lightbox="gallery-item" title="Title Here 2"><img
+                    src="http://placehold.it/400x300" alt=""></a>
+              </div>
+              <!-- Portfolio Item End -->
+
+              <!-- Portfolio Item Start -->
+              <div class="gallery-item" style="position: absolute; left: 570px; top: 0px;">
+                <a href="http://placehold.it/400x300" data-lightbox="gallery-item" title="Title Here 3"><img
+                    src="http://placehold.it/400x300" alt=""></a>
+              </div>
+              <!-- Portfolio Item End -->
+
+              <!-- Portfolio Item Start -->
+              <div class="gallery-item" style="position: absolute; left: 855px; top: 0px;">
+                <a href="http://placehold.it/400x300" data-lightbox="gallery-item" title="Title Here 4"><img
+                    src="http://placehold.it/400x300" alt=""></a>
+              </div>
+              <!-- Portfolio Item End -->
+
+              <!-- Portfolio Item Start -->
+              <div class="gallery-item" style="position: absolute; left: 0px; top: 214px;">
+                <a href="http://placehold.it/400x300" data-lightbox="gallery-item" title="Title Here 5"><img
+                    src="http://placehold.it/400x300" alt=""></a>
+              </div>
+              <!-- Portfolio Item End -->
+
+              <!-- Portfolio Item Start -->
+              <div class="gallery-item" style="position: absolute; left: 285px; top: 214px;">
+                <a href="http://placehold.it/400x300" data-lightbox="gallery-item" title="Title Here 6"><img
+                    src="http://placehold.it/400x300" alt=""></a>
+              </div>
+              <!-- Portfolio Item End -->
+
+              <!-- Portfolio Item Start -->
+              <div class="gallery-item" style="position: absolute; left: 570px; top: 214px;">
+                <a href="http://placehold.it/400x300" data-lightbox="gallery-item" title="Title Here 2"><img
+                    src="http://placehold.it/400x300" alt=""></a>
+              </div>
+              <!-- Portfolio Item End -->
+
+              <!-- Portfolio Item Start -->
+              <div class="gallery-item" style="position: absolute; left: 855px; top: 214px;">
+                <a href="http://placehold.it/400x300" data-lightbox="gallery-item" title="Title Here 3"><img
+                    src="http://placehold.it/400x300" alt=""></a>
+              </div>
+              <!-- Portfolio Item End -->
+            </div>
+            <div class="separator separator-rouned">
+              <i class="fa fa-cog"></i>
+            </div>
+
+
+          </div>
+      </section>
 
       <!-- end main-content -->
     </div>
@@ -304,30 +392,35 @@
     src="../../assets/js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js"></script>
   <script type="text/javascript"
     src="../../assets/js/revolution-slider/js/extensions/revolution.extension.video.min.js"></script>
-  <script>
+ <!-- Divider: Clients -->
+<script src="../../assets/js/custom.js"></script>
+<script>
+  $.ajax({
+    url: "/getImagesCount",
+    async: false,
+    success: function (data) {
+      console.log('data', data);
+      if (data.imgLength) {
+        $('#img-gal-appender').empty();
+        for (let index = 1; index <= data.imgLength; index++) {
 
-    function loadPage(el, activeLinkClass) {
-      $('#preloader').show();
-      $.ajax({
-        url: $(el).attr('link'),
-        method: 'GET',
-        success: function (resp) {
-          $('#main-page-container').empty().html(resp);
-          if (activeLinkClass) {
-            $('ul.menuzord-menu').find('li.active').removeClass('active');
-            $('ul.menuzord-menu').find('.navigation-link.' + activeLinkClass).addClass('active');
-          } else {
-            $(el).closest('ul').find('li.active').removeClass('active');
-            $(el).closest('li').addClass('active');
-          }
-          $('#preloader').hide();
+          $('#img-gal-appender').append('<div class="gallery-item">' +
+            '<a href="../../assets/images/gal/gal (' + index + ').jpg" data-lightbox="gallery-item" title="Title Here 1"><img' +
+            ' src="../../assets/images/gal/gal (' + index + ').jpg" alt=""></a>' +
+            '</div>');
         }
-      });
+      }
+      // $(data).find("a:contains(.jpg)").each(function () {
+      //   var filename = this.href.replace(window.location.host, "").replace("http://", "");
+      //   $("body").append("<img src='images/parenting/" + filename + "'>");
+      // });
     }
-
-    $('a.navigation-link.home-link').click();
-
-  </script>
+  });
+</script>
 </body>
 
 </html>
+
+
+
+

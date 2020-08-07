@@ -162,15 +162,15 @@
           <div class="container">
             <nav id="menuzord" class="menuzord bg-theme-colored pull-left flip menuzord-responsive">
               <ul class="menuzord-menu">
-                <li class="active"><a link="/home" href="javascript:;"
-                    class="navigation-link home-link navigation-link-h" onclick="loadPage(this)">Home</a></li>
+                <li><a link="/" href="/"
+                    class="navigation-link home-link navigation-link-h">Home</a></li>
                 <li><a link="/about_us" href="/about_us" class="navigation-link navigation-link-a">About
                     Us</a></li>
                 <li><a link="/our_courses" href="/our_courses" class="navigation-link navigation-link-o">Our
                     Courses</a></li>
                 <li><a link="/gallery" href="/gallery" class="navigation-link navigation-link-g">Photo
                     Gallery</a></li>
-                <li><a link="/contact_us" href="/contact_us" class="navigation-link navigation-link-c">Contact
+                <li  class="active"><a link="/contact_us" href="/contact_us" class="navigation-link navigation-link-c">Contact
                     Us</a></li>
               </ul>
               <!-- <ul class="pull-right flip hidden-sm hidden-xs">
@@ -198,6 +198,120 @@
     <!-- Start main-content -->
     <div class="main-content" id="main-page-container">
 
+      <!-- Start main-content -->
+      <div class="">
+
+        <!-- Section: inner-header -->
+        <section class="inner-header divider parallax layer-overlay overlay-dark-5"
+          data-bg-img="../../assets/images/bg/bg3.jpg">
+          <div class="container pt-70 pb-20">
+            <!-- Section Content -->
+            <div class="section-content">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="title text-white">Contact Us</h2>
+                  <ol class="breadcrumb text-left text-black mt-10">
+                    <li><a href="#" class="text-gray-silver">Home</a></li>
+                    <li class="active text-gray-silver">Contact Us</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Divider: Contact -->
+        <section class="divider">
+          <div class="container pt-0">
+            <div class="row mb-60 bg-deep">
+              <div class="col-sm-12 col-md-4">
+                <div class="contact-info text-center pt-60 pb-60 border-right">
+                  <i class="fa fa-phone font-36 mb-10 text-theme-colored"></i>
+                  <h3>Call Us</h3>
+                  <h5 class="text-gray">Tel: 07116 - 244960</h5>
+                  <h5 class="text-gray">Mob: 9545535000, 9607100018, 9049170486</h5>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4">
+                <div class="contact-info text-center  pt-60 pb-60 border-right">
+                  <i class="fa fa-map-marker font-36 mb-10 text-theme-colored"></i>
+                  <h3>Address</h3>
+                  <h4 class="text-gray">Maharana Pratap Chowk, Near Ashok Vidyalaya, Mangalwari Peth, Umred</h4>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4">
+                <div class="contact-info text-center  pt-60 pb-60">
+                  <i class="fa fa-envelope font-36 mb-10 text-theme-colored"></i>
+                  <h3>Email</h3>
+                  <h4 class="text-gray">shrisainursingschool@gmail.com</h4>
+                </div>
+              </div>
+            </div>
+            <div class="row pt-10">
+              <div class="col-md-5">
+                <h4 class="mt-0 mb-30 line-bottom">Our Location On Map</h4>
+                <!-- Google Map HTML Codes --><iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.433829274798!2d79.32380191424227!3d20.8545570990799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4ade710078a11%3A0x637d0a79f7c8aada!2sShri%20Sai%20Scool%20Of%20Nursing%2C%20Umred!5e0!3m2!1sen!2sin!4v1596729998937!5m2!1sen!2sin"
+                  width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="col-md-7">
+                <h4 class="mt-0 mb-30 line-bottom">Interested in discussing with us ? Send us your message.</h4>
+                <!-- Contact Form -->
+                <form id="contact_form" name="contact_form" class="" action="/sendmail" method="post">
+
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="form_name">Name <small>*</small></label>
+                        <input name="form_name" class="form-control" type="text" placeholder="Enter Name" required="">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Email <small>*</small></label>
+                        <input name="form_email" class="form-control required email" type="email"
+                          placeholder="Enter Email">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="form_name">Subject <small>*</small></label>
+                        <input name="form_subject" class="form-control required" type="text"
+                          placeholder="Enter Subject">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="form_phone">Phone</label>
+                        <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="form_name">Message</label>
+                    <textarea name="form_message" class="form-control required" rows="5"
+                      placeholder="Enter Message"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <input name="form_botcheck" class="form-control" type="hidden" value="" />
+                    <button type="submit"
+                      class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px"
+                      data-loading-text="Please wait...">Send your message</button>
+                    <button type="reset"
+                      class="btn btn-flat btn-theme-colored text-uppercase mt-10 mb-sm-30 border-left-theme-color-2-4px">Reset</button>
+                  </div>
+                </form>
+
+
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- end main-content -->
 
 
       <!-- end main-content -->
@@ -304,30 +418,43 @@
     src="../../assets/js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js"></script>
   <script type="text/javascript"
     src="../../assets/js/revolution-slider/js/extensions/revolution.extension.video.min.js"></script>
-  <script>
+  <!-- Divider: Clients -->
+  <script src="../../assets/js/custom.js"></script>
 
-    function loadPage(el, activeLinkClass) {
-      $('#preloader').show();
-      $.ajax({
-        url: $(el).attr('link'),
-        method: 'GET',
-        success: function (resp) {
-          $('#main-page-container').empty().html(resp);
-          if (activeLinkClass) {
-            $('ul.menuzord-menu').find('li.active').removeClass('active');
-            $('ul.menuzord-menu').find('.navigation-link.' + activeLinkClass).addClass('active');
-          } else {
-            $(el).closest('ul').find('li.active').removeClass('active');
-            $(el).closest('li').addClass('active');
+  <!-- Contact Form Validation-->
+  <script type="text/javascript">
+    $("#contact_form").validate({
+      submitHandler: function (form) {
+        var form_btn = $(form).find('button[type="submit"]');
+        var form_result_div = '#form-result';
+        $(form_result_div).remove();
+        form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
+        var form_btn_old_msg = form_btn.html();
+        form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
+        $(form).ajaxSubmit({
+          dataType: 'json',
+          success: function (data) {
+            console.log("data", data);
+            if (data.status) {
+              $(form).find('.form-control').val('');
+              $(form_result_div).removeClass('alert-danger').addClass('alert-success');
+              $(form_result_div).html(data.message).fadeIn('slow');
+            } else {
+              $(form_result_div).removeClass('alert-success').addClass('alert-danger');
+              $(form_result_div).html(data.message).fadeIn('slow');
+            }
+            form_btn.prop('disabled', false).html(form_btn_old_msg);
+            setTimeout(function () { $(form_result_div).fadeOut('slow') }, 6000);
           }
-          $('#preloader').hide();
-        }
-      });
-    }
-
-    $('a.navigation-link.home-link').click();
-
+        });
+      }
+    });
   </script>
 </body>
 
 </html>
+
+
+
+<!-- Divider: Clients -->
+<script src="../../assets/js/custom.js"></script>

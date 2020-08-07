@@ -15,11 +15,11 @@ router.use("/assets", express.static(__dirname + "/assets"));
 //app.use(express.static(__dirname + '/pages'));
 
 router.get("/", function (request, response) {
-  response.sendFile(path.join(__dirname + "/pages/index/index.html"));
+  response.sendFile(path.join(__dirname + "/pages/index/index_n.html"));
 });
 
 router.get("/home", function (request, response) {
-  response.sendFile(path.join(__dirname + "/pages/home/home.html"));
+  response.sendFile(path.join(__dirname + "/pages/home/home_n.html"));
 });
 
 // router.get("/dashboard", function (request, response) {
@@ -28,15 +28,15 @@ router.get("/home", function (request, response) {
 
 router.get("/contact_us", function (request, response) {
   console.log('contact_us link')
-  response.sendFile(path.join(__dirname + "/pages/contact/contact.html"));
+  response.sendFile(path.join(__dirname + "/pages/contact/contact_n.html"));
 });
 
 router.get("/about_us", function (request, response) {
-  response.sendFile(path.join(__dirname + "/pages/about_us/about_us.html"));
+  response.sendFile(path.join(__dirname + "/pages/about_us/about_us_n.html"));
 });
 
 router.get("/our_courses", function (request, response) {
-  response.sendFile(path.join(__dirname + "/pages/courses/courses.html"));
+  response.sendFile(path.join(__dirname + "/pages/courses/courses_n.html"));
 });
 
 router.get("/campus_tour", function (request, response) {
@@ -48,7 +48,7 @@ router.get("/student_life", function (request, response) {
 });
 
 router.get("/gallery", function (request, response) {
-  response.sendFile(path.join(__dirname + "/pages/gallery/gallery.html"));
+  response.sendFile(path.join(__dirname + "/pages/gallery/gallery_n.html"));
 });
 
 router.get("/getImagesCount", function (request, response) {
